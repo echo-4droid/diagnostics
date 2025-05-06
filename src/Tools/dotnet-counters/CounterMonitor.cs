@@ -323,6 +323,10 @@ namespace Microsoft.Diagnostics.Tools.Counters
                             catch (Exception) { }
                             _renderer = new JSONExporter(output, processName);
                         }
+                        else if (format == CountersExportFormat.jsonPick)
+                        {
+                            _renderer = new JSONPickExporter(output);
+                        }
                         else
                         {
                             _stdError.WriteLine($"The output format {format} is not a valid output format.");

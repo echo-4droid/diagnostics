@@ -14,7 +14,7 @@ using Microsoft.Internal.Common.Utils;
 
 namespace Microsoft.Diagnostics.Tools.Counters
 {
-    public enum CountersExportFormat { csv, json };
+    public enum CountersExportFormat { csv, json, jsonPick };
 
     internal static class Program
     {
